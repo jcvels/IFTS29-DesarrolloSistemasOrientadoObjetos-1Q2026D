@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresar));
             picLogo = new PictureBox();
             txtUsuario = new TextBox();
             txtContrasena = new TextBox();
@@ -39,9 +40,11 @@
             // 
             // picLogo
             // 
+            picLogo.InitialImage = (Image)resources.GetObject("picLogo.InitialImage");
             picLogo.Location = new Point(12, 12);
             picLogo.Name = "picLogo";
             picLogo.Size = new Size(250, 250);
+            picLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picLogo.TabIndex = 0;
             picLogo.TabStop = false;
             // 
