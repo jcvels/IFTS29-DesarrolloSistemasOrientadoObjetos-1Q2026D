@@ -39,6 +39,12 @@
             btnLimpiar = new Button();
             lblTipo = new Label();
             cboTipo = new ComboBox();
+            dataGridView1 = new DataGridView();
+            Nombre = new DataGridViewTextBoxColumn();
+            Apellido = new DataGridViewTextBoxColumn();
+            TipoDocumento = new DataGridViewTextBoxColumn();
+            Documento = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lblNombre
@@ -91,9 +97,9 @@
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(297, 126);
+            btnIngresar.Location = new Point(467, 67);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(75, 23);
+            btnIngresar.Size = new Size(75, 52);
             btnIngresar.TabIndex = 5;
             btnIngresar.Text = "INGRESAR";
             btnIngresar.UseVisualStyleBackColor = true;
@@ -101,7 +107,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(216, 126);
+            btnLimpiar.Location = new Point(467, 35);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 6;
@@ -113,7 +119,7 @@
             lblTipo.AutoSize = true;
             lblTipo.Location = new Point(13, 70);
             lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(31, 15);
+            lblTipo.Size = new Size(30, 15);
             lblTipo.TabIndex = 8;
             lblTipo.Text = "Tipo";
             // 
@@ -125,12 +131,44 @@
             cboTipo.Size = new Size(274, 23);
             cboTipo.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, TipoDocumento, Documento });
+            dataGridView1.Location = new Point(13, 128);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(529, 177);
+            dataGridView1.TabIndex = 9;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            // 
+            // Apellido
+            // 
+            Apellido.HeaderText = "Apellido";
+            Apellido.Name = "Apellido";
+            // 
+            // TipoDocumento
+            // 
+            TipoDocumento.HeaderText = "Tipo";
+            TipoDocumento.Name = "TipoDocumento";
+            // 
+            // Documento
+            // 
+            Documento.HeaderText = "Documento";
+            Documento.Name = "Documento";
+            // 
             // frmIngreso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(384, 161);
+            ClientSize = new Size(554, 311);
+            Controls.Add(dataGridView1);
             Controls.Add(cboTipo);
             Controls.Add(lblTipo);
             Controls.Add(btnLimpiar);
@@ -143,7 +181,8 @@
             Controls.Add(lblNombre);
             Name = "frmIngreso";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "PRIMER PROYECTO";
+            Text = "Ingreso de datos";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +199,10 @@
         private Button btnLimpiar;
         private Label lblTipo;
         private ComboBox cboTipo;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn TipoDocumento;
+        private DataGridViewTextBoxColumn Documento;
     }
 }
