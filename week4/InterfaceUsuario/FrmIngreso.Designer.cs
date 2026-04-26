@@ -39,12 +39,12 @@
             btnLimpiar = new Button();
             lblTipo = new Label();
             cboTipo = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dbgrdIngresos = new DataGridView();
             Nombre = new DataGridViewTextBoxColumn();
             Apellido = new DataGridViewTextBoxColumn();
             TipoDocumento = new DataGridViewTextBoxColumn();
             Documento = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dbgrdIngresos).BeginInit();
             SuspendLayout();
             // 
             // lblNombre
@@ -113,6 +113,7 @@
             btnLimpiar.TabIndex = 6;
             btnLimpiar.Text = "LIMPIAR";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // lblTipo
             // 
@@ -131,44 +132,48 @@
             cboTipo.Size = new Size(274, 23);
             cboTipo.TabIndex = 3;
             // 
-            // dataGridView1
+            // dbgrdIngresos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, TipoDocumento, Documento });
-            dataGridView1.Location = new Point(13, 128);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(529, 177);
-            dataGridView1.TabIndex = 9;
+            dbgrdIngresos.AllowUserToAddRows = false;
+            dbgrdIngresos.AllowUserToDeleteRows = false;
+            dbgrdIngresos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dbgrdIngresos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, TipoDocumento, Documento });
+            dbgrdIngresos.Location = new Point(13, 128);
+            dbgrdIngresos.Name = "dbgrdIngresos";
+            dbgrdIngresos.ReadOnly = true;
+            dbgrdIngresos.Size = new Size(529, 177);
+            dbgrdIngresos.TabIndex = 9;
             // 
             // Nombre
             // 
             Nombre.HeaderText = "Nombre";
             Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
             // 
             // Apellido
             // 
             Apellido.HeaderText = "Apellido";
             Apellido.Name = "Apellido";
+            Apellido.ReadOnly = true;
             // 
             // TipoDocumento
             // 
             TipoDocumento.HeaderText = "Tipo";
             TipoDocumento.Name = "TipoDocumento";
+            TipoDocumento.ReadOnly = true;
             // 
             // Documento
             // 
             Documento.HeaderText = "Documento";
             Documento.Name = "Documento";
+            Documento.ReadOnly = true;
             // 
             // frmIngreso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(554, 311);
-            Controls.Add(dataGridView1);
+            Controls.Add(dbgrdIngresos);
             Controls.Add(cboTipo);
             Controls.Add(lblTipo);
             Controls.Add(btnLimpiar);
@@ -182,7 +187,7 @@
             Name = "frmIngreso";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ingreso de datos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dbgrdIngresos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,7 +204,7 @@
         private Button btnLimpiar;
         private Label lblTipo;
         private ComboBox cboTipo;
-        private DataGridView dataGridView1;
+        private DataGridView dbgrdIngresos;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn TipoDocumento;
