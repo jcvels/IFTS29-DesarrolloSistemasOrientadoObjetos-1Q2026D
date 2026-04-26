@@ -40,6 +40,7 @@
             // 
             // picLogo
             // 
+            picLogo.Image = (Image)resources.GetObject("picLogo.Image");
             picLogo.InitialImage = (Image)resources.GetObject("picLogo.InitialImage");
             picLogo.Location = new Point(12, 12);
             picLogo.Name = "picLogo";
@@ -89,6 +90,7 @@
             btnIngresar.TabIndex = 5;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // frmIngresar
             // 
@@ -103,7 +105,7 @@
             Controls.Add(picLogo);
             Name = "frmIngresar";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LogIn";
+            Text = "Autentificación";
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
