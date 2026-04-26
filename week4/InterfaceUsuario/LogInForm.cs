@@ -1,8 +1,8 @@
 namespace InterfaceUsuario
 {
-    public partial class Form1 : Form
+    public partial class frmIngresar : Form
     {
-        public Form1()
+        public frmIngresar()
         {
             InitializeComponent();
         }
